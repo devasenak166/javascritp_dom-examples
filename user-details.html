@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>user details!...</h1>
+    
+    <form action="#">
+    <label for="name">Name:</label><input type="text" name="name" id="name" required>
+    <label for="email">Email:</label><input type="text" name="email" id="email" required>
+    <label for="number">Phone No:</label><input type="text" name="number" id="number" required>
+    <label for="city">City:</label><input type="text" name="city" id="city" required>
+    <label for="pincode">Pin code:</label><input type="text" name="pincode" id="pincode" required>
+    <input type="submit" value="capture" id="submit">    </form>
+    <p id="para"></p>
+    <script>
+      let submit=document.getElementById("submit");
+        function userDetails(e){
+            e.preventDefault();
+            let name=document.getElementById("name").value;
+        console.log(name);
+        let email=document.getElementById("email").value;
+        let phone=document.getElementById("number").value;
+        let city=document.getElementById("city").value;
+        let pincode=document.getElementById("pincode").value;
+        let para=document.querySelector("#para");
+            para.innerHTML=`<h3>The user Detail  is Name: ${name}<br> email :${email} <br> phone number :${phone} <br>
+            city : ${city} <br> pincode : ${pincode}.</h3>`;
+           
+        }
+submit.addEventListener("click",userDetails);
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        body{padding-top:30px;}
+        label,input{display:block;} 
+        </style>
+</head>
+<body>
+    <p>Input radius value and get the volume of a sphere.</p>
+<form action="#" id="MyForm">
+<label for="radius">Radius</label><input type="text" name="radius" id="radius" required>
+<input type="submit" value="Calculate" id="submit">    </form>
+<p id="para"></p>
+
+    <script>
+        
+function myFunction(e){
+    e.preventDefault();
+    let radius=document.getElementById("radius").value;
+         let submit=document.getElementById("submit");
+    let answer=Math.floor((4/3)*Math.pow(radius,3));
+let para=document.querySelector("#para");
+    para.textContent=answer;
+}
+submit.addEventListener("click",myFunction);
+    </script>
+</body>
+</html>
